@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 import todosData from "../data/todos";
 import TodoItem from "./TodoItem";
@@ -41,10 +40,6 @@ const Page = (props) => {
          />
       </div>
    )
-}
-
-Page.propTypes = {
-
 }
 
 export default Page

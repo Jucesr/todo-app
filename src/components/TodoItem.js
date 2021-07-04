@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 const TodoItem = (props) => {
    const [isDescriptionVisible, setIsDescriptionVisible] = useState(false)
@@ -25,10 +24,6 @@ const TodoItem = (props) => {
 
       </div>
    )
-}
-
-TodoItem.propTypes = {
-
 }
 
 export default TodoItem
