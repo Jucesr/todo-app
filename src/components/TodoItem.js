@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 const TodoItem = (props) => {
-   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false)
+   // Declarar state para mostrar/ocultar descripcion
+
    return (
       <div className="TodoItem">
          <div>
@@ -9,14 +10,9 @@ const TodoItem = (props) => {
                <div>
                   {props.title}
                </div>
-               <span className="TodoItem-Show" onClick={() => {
-                  setIsDescriptionVisible(!isDescriptionVisible)
-               }}>{!isDescriptionVisible ? 'Ver más' : 'Ocultar'}</span>
+               {/* Span para ver mas u ocultar */}
             </div>
-            {isDescriptionVisible && <div className="TodoItem-Description">
-               {props.description}
-            </div>
-            }
+            {/* Validar si el state es verdadero y renderizar descripcion */}
          </div>
          <div className="TodoItem-Delete" onClick={() => props.deleteTodo(props.id)}>
             Borrar

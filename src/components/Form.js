@@ -1,41 +1,23 @@
 import React, { useState } from 'react'
 
 const Form = (props) => {
-   const [title, setTitle] = useState('')
-   const [description, setDescription] = useState('')
+   // Declarar state para title y description
 
    const submitForm = () => {
-      props.onSubmit({
-         title,
-         description,
-      })
-      setTitle('')
-      setDescription('')
+      // Llamar al metodo onSubmit del componente padre
+
+      // Limpiar formulario
    }
 
    return (
       <div className="Form">
          <div>
-            <input
-               placeholder="Titulo"
-               value={title}
-               onChange={(e) => {
-                  setTitle(e.target.value)
-               }}>
-            </input>
+            {/* Renderizar Input */}
          </div>
          <div>
-            <textarea
-               placeholder="Descripción"
-               value={description}
-               onChange={(e) => {
-                  setDescription(e.target.value)
-               }}>
-            </textarea>
+            {/* Renderizar Text Area */}
          </div>
-         <div className="Form-Button" onClick={submitForm}>
-            Agregar
-         </div>
+         {/* Renderizar boton */}
       </div>
    )
 }

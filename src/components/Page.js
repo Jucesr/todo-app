@@ -6,38 +6,21 @@ import Form from "./Form";
 
 const Page = (props) => {
 
-   const [data, setData] = useState(todosData)
+   // Declarar el state para almacenar todos
 
    const addTodo = (todo) => {
-      setData([
-         ...data,
-         {
-            ...todo,
-            id: Date.now()
-         }
-      ])
+      // Agregar Todo
    }
 
    const deleteTodo = (todoId) => {
-      setData(data.filter(todoItem => todoItem.id !== todoId))
+      // Borrar todo
    }
 
    return (
       <div className="Page">
-         {data.map(todoItem => {
-            return (
-               <TodoItem
-                  key={todoItem.id}
-                  id={todoItem.id}
-                  title={todoItem.title}
-                  description={todoItem.description}
-                  deleteTodo={deleteTodo}
-               />
-            )
-         })}
-         <Form
-            onSubmit={addTodo}
-         />
+         {/* Renderizar arreglo de todos */}
+         
+         {/* Renderizar el Form */}
       </div>
    )
 }
